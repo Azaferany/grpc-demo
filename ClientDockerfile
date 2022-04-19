@@ -4,6 +4,7 @@ WORKDIR /app
 # Copy csproj and restore as distinct layers
 COPY src/GrpcDemo.Client/GrpcDemo.Client.csproj .
 RUN dotnet restore
+COPY src/GrpcDemo.Client .
 
 RUN dotnet publish -c Release -o out
 
