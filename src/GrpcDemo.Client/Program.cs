@@ -31,4 +31,4 @@ app.MapGet("/GrpcTest", ([FromServices] ICalculatorService calculatorService) =>
         Y = 10
     }));
 
-app.Run("http://*:5990");
+app.Run("http://*:7590");
