@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // 
 ////
 //////
-builder.Services.AddCodeFirstGrpcClient<ICalculatorService>(options => options.Address = new Uri("http://localhost:5017"))
+builder.Services.AddCodeFirstGrpcClient<ICalculatorService>(options => options.Address = new Uri(builder.Configuration["GRPC_SERVER"]))
     .AddClientAccessTokenHandler();
 //////
 ////
