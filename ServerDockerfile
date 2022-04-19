@@ -5,7 +5,7 @@ WORKDIR /app
 COPY src/GrpcDemo.Server/GrpcDemo.Server.csproj .
 
 RUN dotnet restore
-
+COPY src/GrpcDemo.Server .
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
