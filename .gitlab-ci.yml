@@ -28,7 +28,7 @@ client:
   stage: build
   script:
     - docker login $CI_REGISTRY -u $USER -p $TOKEN
-      - docker build -t $CI_REGISTRY_IMAGE:GrpcDemo.Client -f src/GrpcDemo.Client/Dockerfile .
+    - docker build -t $CI_REGISTRY_IMAGE:GrpcDemo.Client -f src/GrpcDemo.Client/Dockerfile .
     - export VERSION=$(date +%y-%m-%d)
     - export TAG=token-${VERSION}-${CI_COMMIT_SHA:0:8}
     - docker tag $CI_REGISTRY_IMAGE:token $CI_REGISTRY_IMAGE:$TAG
