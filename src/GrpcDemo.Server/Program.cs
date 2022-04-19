@@ -5,11 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
 {
     // Setup a HTTP/2 endpoint without TLS.
-    options.ListenLocalhost(7516, listenOptions =>
+    options.ListenAnyIP(7516, listenOptions =>
         listenOptions.Protocols = HttpProtocols.Http1);
             
     //https://docs.microsoft.com/en-us/aspnet/core/grpc/troubleshoot?view=aspnetcore-6.0#unable-to-start-aspnet-core-grpc-app-on-macos
-    options.ListenLocalhost(7517, listenOptions =>
+    options.ListenAnyIP(7517, listenOptions =>
         listenOptions.Protocols = HttpProtocols.Http2);
 });
 
