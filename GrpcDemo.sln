@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E06C41FA-070A-4451-B7AB-678AB537C717}"
+	ProjectSection(SolutionItems) = preProject
+		ServerDockerfile = ServerDockerfile
+		ClientDockerfile = ClientDockerfile
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcDemo.Server", "src\GrpcDemo.Server\GrpcDemo.Server.csproj", "{EB1D5004-E8F6-4E57-9B38-6875EAB7A23B}"
 EndProject

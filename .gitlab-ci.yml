@@ -17,7 +17,7 @@ server:
     - docker login $DEV_REGISTRY -u $DEV_REGISTRY_USER -p $DEV_REGISTRY_TOKEN
     - export PROJECT_NAME=$(echo ${CI_PROJECT_NAME} | awk '{print tolower($0)}')
     - export DEVTAG=${DEV_REGISTRY}/${PROJECT_NAME}.server
-    - docker build -t $DEVTAG -f src/GrpcDemo.Server/Dockerfile .
+    - docker build -t $DEVTAG -f ServerDockerfile .
     - docker push $DEVTAG
   
   when: on_success
@@ -29,7 +29,7 @@ client:
     - docker login $DEV_REGISTRY -u $DEV_REGISTRY_USER -p $DEV_REGISTRY_TOKEN
     - export PROJECT_NAME=$(echo ${CI_PROJECT_NAME} | awk '{print tolower($0)}')
     - export DEVTAG=${DEV_REGISTRY}/${PROJECT_NAME}.client
-    - docker build -t $DEVTAG -f src/GrpcDemo.Client/Dockerfile .
+    - docker build -t $DEVTAG -f ClientDockerfile .
     - docker push $DEVTAG
 
   when: on_success
