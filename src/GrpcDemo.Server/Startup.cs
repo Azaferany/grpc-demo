@@ -62,7 +62,7 @@ public static class Startup
             // 
             ////
             //////
-            endpointBuilder.MapGrpcService<ICalculatorService>();
+            endpointBuilder.MapGrpcService<CalculatorService>();
             endpointBuilder.MapCodeFirstGrpcReflectionService();
             //////
             ////
