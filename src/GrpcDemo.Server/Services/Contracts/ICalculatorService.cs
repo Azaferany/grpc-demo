@@ -9,5 +9,5 @@ public interface ICalculatorService
 {
     ValueTask<MultiplyResult> MultiplyAsync(MultiplyRequest request, CancellationToken cancellationToken = default);
 
-    ValueTask<MultiplyResult> Multiply2Async(MultiplyRequest request, CallContext callContext = default);
+    ValueTask<MultiplyResult> AuthorizeAndMultiplyAsync(MultiplyRequest request, CallContext callContext = default);
 }

@@ -40,7 +40,7 @@ namespace GrpcDemo.Server.Services.Contracts
     public partial interface ICalculatorService
     {
         global::System.Threading.Tasks.ValueTask<MultiplyResult> MultiplyAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
-        global::System.Threading.Tasks.ValueTask<MultiplyResult> Multiply2Async(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
+        global::System.Threading.Tasks.ValueTask<MultiplyResult> AuthorizeAndMultiplyAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
     }
 
 }

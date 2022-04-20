@@ -10,13 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 ////
 //////
 builder.Services.AddCodeFirstGrpcClient<ICalculatorService>(options =>
-    options.Address = new Uri(builder.Configuration["GRPC_SERVER"]));
-    //.AddClientAccessTokenHandler();
+    options.Address = new Uri(builder.Configuration["GRPC_SERVER"]))
+    .AddClientAccessTokenHandler();
 //////
 ////
 // 
 
-/*builder.Services.AddClientAccessTokenManagement(options =>
+builder.Services.AddClientAccessTokenManagement(options =>
 {
     options.Clients.Add("default", new ClientCredentialsTokenRequest
     {
@@ -25,7 +25,7 @@ builder.Services.AddCodeFirstGrpcClient<ICalculatorService>(options =>
         ClientSecret = builder.Configuration["ClientSecret"],
     });
     options.CacheKeyPrefix = "Payping_Token_";
-});*/
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1",new OpenApiInfo()
@@ -37,11 +37,18 @@ var app = builder.Build();
 app.MapSwagger();
 app.UseSwaggerUI();
 
-app.MapGet("/GrpcTest", ([FromServices] ICalculatorService calculatorService) => calculatorService.MultiplyAsync(
+app.MapGet("/Multiply", ([FromServices] ICalculatorService calculatorService) => calculatorService.MultiplyAsync(
     new MultiplyRequest()
     {
         X = 50,
         Y = 10
+    }));
+
+app.MapGet("/AuthorizeAndMultiply", ([FromServices] ICalculatorService calculatorService) => calculatorService.AuthorizeAndMultiplyAsync(
+    new MultiplyRequest()
+    {
+        X = 50,
+        Y = 100
     }));
 
 app.Run("http://*:7590");
