@@ -16,7 +16,10 @@
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:7516;http://localhost:7517",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PayPing_Identity_Address": "https://oauth.payping.dev",
+        "PayPing_ApiName": "UserServiceApi",
+        "PayPing_ApiSecret": "secret"
       }
     },
     "IIS Express": {

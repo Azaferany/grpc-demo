@@ -13,7 +13,11 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:7590;http://localhost:7590",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "TokenAddress": "https://oauth.payping.dev",
+        "ClientId": "payping-AdminPanelApiClient",
+        "ClientSecret": "secret",
+        "GRPC_SERVER": "http://localhost:7517"
       }
     },
     "IIS Express": {

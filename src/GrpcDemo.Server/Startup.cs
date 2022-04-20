@@ -26,6 +26,7 @@ public static class Startup
             .AddJwtBearer(options =>
             {
                 options.Authority = configuration["PayPing_Identity_Address"];
+                options.Audience = configuration["PayPing_ApiName"];
                 options.MapInboundClaims = false;
                 // if token does not contain a dot, it is a reference token
                 options.ForwardDefaultSelector = Selector.ForwardReferenceToken("Introspection");
