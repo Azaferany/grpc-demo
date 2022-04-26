@@ -12,8 +12,6 @@
     "GrpcDemo.WebApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
       "applicationUrl": "http://localhost:7516;http://localhost:7517",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",

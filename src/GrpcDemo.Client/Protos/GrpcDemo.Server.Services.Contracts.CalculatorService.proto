@@ -1,0 +1,20 @@
+syntax = "proto3";
+package GrpcDemo.Server.Services.Contracts;
+
+message MultiplyRequest {
+  int32 X = 1;
+  int32 Y = 2;
+}
+
+message MultiplyResult {
+  int32 Result = 1;
+}
+
+service CalculatorService {
+   rpc AuthorizeAndMultiply(GrpcDemo.Server.Services.Contracts.MultiplyRequest) returns (GrpcDemo.Server.Services.Contracts.MultiplyResult);
+   rpc BiDirectionalStreaming(stream GrpcDemo.Server.Services.Contracts.MultiplyRequest) returns (stream GrpcDemo.Server.Services.Contracts.MultiplyResult);
+   rpc ClientStreaming(stream GrpcDemo.Server.Services.Contracts.MultiplyRequest) returns (GrpcDemo.Server.Services.Contracts.MultiplyResult);
+   rpc Multiply(GrpcDemo.Server.Services.Contracts.MultiplyRequest) returns (GrpcDemo.Server.Services.Contracts.MultiplyResult);
+   rpc ServerStreaming(GrpcDemo.Server.Services.Contracts.MultiplyRequest) returns (stream GrpcDemo.Server.Services.Contracts.MultiplyResult);
+}
+

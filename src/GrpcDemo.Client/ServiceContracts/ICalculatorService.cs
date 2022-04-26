@@ -39,8 +39,11 @@ namespace GrpcDemo.Server.Services.Contracts
     [global::System.ServiceModel.ServiceContract(Name = @"GrpcDemo.Server.Services.Contracts.CalculatorService")]
     public partial interface ICalculatorService
     {
-        global::System.Threading.Tasks.ValueTask<MultiplyResult> MultiplyAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
         global::System.Threading.Tasks.ValueTask<MultiplyResult> AuthorizeAndMultiplyAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
+        global::System.Collections.Generic.IAsyncEnumerable<MultiplyResult> BiDirectionalStreamingAsync(global::System.Collections.Generic.IAsyncEnumerable<MultiplyRequest> values, global::ProtoBuf.Grpc.CallContext context = default);
+        global::System.Threading.Tasks.ValueTask<MultiplyResult> ClientStreamingAsync(global::System.Collections.Generic.IAsyncEnumerable<MultiplyRequest> values, global::ProtoBuf.Grpc.CallContext context = default);
+        global::System.Threading.Tasks.ValueTask<MultiplyResult> MultiplyAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
+        global::System.Collections.Generic.IAsyncEnumerable<MultiplyResult> ServerStreamingAsync(MultiplyRequest value, global::ProtoBuf.Grpc.CallContext context = default);
     }
 
 }
