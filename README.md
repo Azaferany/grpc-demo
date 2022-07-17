@@ -32,7 +32,7 @@ to startup
             ClientId = Configuration["ClientId"],
             ClientSecret = Configuration["ClientSecret"],
         });
-        options.CacheKeyPrefix = "Payping_Token_";
+        options.CacheKeyPrefix = "Token_";
     });
 
 2.use 
