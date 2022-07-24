@@ -8,7 +8,7 @@
       "preset": "conventionalcommits"
     }],"@semantic-release/github",
     "@semantic-release/changelog",
-    "@semantic-release-dotnet",
+    "semantic-release-dotnet",
     ["@semantic-release/git", {
       "assets": ["Directory.Build.props", "*.md", "docs"],
       "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
