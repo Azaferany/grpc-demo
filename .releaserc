@@ -9,7 +9,7 @@
     }],"@semantic-release/github",
     "@semantic-release/changelog",
     ["@semantic-release/git", {
-      "assets": ["Directory.Build.props", "*.md", "docs"],
+      "assets": ["Directory.Build.props", "docs"],
       "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }]
   ]
