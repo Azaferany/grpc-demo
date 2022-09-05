@@ -1,23 +1,46 @@
 {
-  "branches": ["main"],
+  "branches": [
+    "main"
+  ],
   "plugins": [
-    ["@semantic-release/commit-analyzer", {
-      "preset": "conventionalcommits"
-    }],
-    ["@semantic-release/release-notes-generator", {
-      "preset": "conventionalcommits"
-    }],"@semantic-release/github",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    "@semantic-release/github",
     "@semantic-release/changelog",
     "semantic-release-dotnet",
-    ["@semantic-release/git", {
-      "assets": ["Directory.Build.props", "*.md", "docs"],
-      "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-    }],
-    [ "semantic-release-telegram", {
-          "chats": [ -654863478 ],
-          "templates": {
-                  "success" : "A new version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b><a href='{repository_url}releases/tag/v{version}'>{version}</a></b></br>{release_notes}.</br>"
-                }
-          }]
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "Directory.Build.props",
+          "*.md",
+          "docs"
+        ],
+        "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "semantic-release-telegram",
+      {
+        "chats": [
+          -654863478
+        ],
+        "telegra.ph": {
+          "title": "{name} v.{version}",
+          "message": "<a href='{telegraph_url}'>Release Notes</a>",
+          "content": "{release_notes}"
+        }
+      }
+    ]
   ]
 }
