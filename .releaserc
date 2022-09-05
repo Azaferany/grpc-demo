@@ -18,6 +18,6 @@
           "templates": {
                   "success" : "A new version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b><a href='{repository_url}releases/tag/v{version}'>{version}</a></b></br>{release_notes}.</br>"
                 }
-        } ]
+          }]
   ]
 }
