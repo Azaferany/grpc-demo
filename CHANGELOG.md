@@ -1,3 +1,15 @@
+## [1.0.4](https://github.com/Azaferany/grpc-demo/compare/v1.0.3...v1.0.4) (2022-09-05)
+
+
+### Bug Fixes
+
+* fix semantic-release-telegram ([9f3d64c](https://github.com/Azaferany/grpc-demo/commit/9f3d64c605bf03111d92067f4717935362fcfacd))
+
+
+### Performance Improvements
+
+* test telegram release ([c1b2253](https://github.com/Azaferany/grpc-demo/commit/c1b225348cf462201c1989c56318c18ea0f97d8b))
+
 ## [1.0.3](https://github.com/Azaferany/grpc-demo/compare/v1.0.2...v1.0.3) (2022-09-05)
 
 
