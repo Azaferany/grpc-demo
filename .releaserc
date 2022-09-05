@@ -14,7 +14,10 @@
       "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
     [ "semantic-release-telegram", {
-          "chats": [ -654863478 ]
+          "chats": [ -654863478 ],
+          "templates": {
+                  "success" : "A new version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b><a href='{repository_url}releases/tag/v{version}'>{version}</a></b></br>{release_notes}"
+                }
         } ]
   ]
 }
