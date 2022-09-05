@@ -25,10 +25,11 @@ jobs:
           npm install -D @semantic-release/exec
           npm install -D semantic-release-dotnet
           npm install -D conventional-changelog-conventionalcommits
-          npm install -D semantic-release-telegram-bot
+          npm install -i semantic-release-telegram
       - name: run semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TELEGRAM_BOT_TOKEN: 5776156426:AAFc9rkOPAVBongjzNhYKRNIJT2fsSuOwnA
+          TELEGRAM_BOT_ID: 5776156426
+          TELEGRAM_BOT_TOKEN: AAFc9rkOPAVBongjzNhYKRNIJT2fsSuOwnA
           SEMANTIC_RELEASE_PACKAGE: ${{ github.event.repository.name }}
         run: npx semantic-release
