@@ -13,10 +13,8 @@
       "assets": ["Directory.Build.props", "*.md", "docs"],
       "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
-    ["semantic-release-telegram-bot", {
-          "notifyOnSuccess": true,
-          "notifyOnFail": true,
-          "chatIds" : -654863478
-        }]
+    [ "semantic-release-telegram", {
+          "chats": [ -654863478 ]
+        } ]
   ]
 }
