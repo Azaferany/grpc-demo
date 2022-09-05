@@ -31,6 +31,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: 5776156426:AAFc9rkOPAVBongjzNhYKRNIJT2fsSuOwnA
           SEMANTIC_RELEASE_PACKAGE: ${{ github.event.repository.name }}
-
-
         run: npx semantic-release
