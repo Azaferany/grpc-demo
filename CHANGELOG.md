@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Azaferany/grpc-demo/compare/v1.0.2...v1.0.3) (2022-09-05)
+
+
+### Performance Improvements
+
+* test release ([3f1e89a](https://github.com/Azaferany/grpc-demo/commit/3f1e89a884dfb428cc102418d9db3ba8e5ac1da7))
+
 ## [1.0.2](https://github.com/Azaferany/grpc-demo/compare/v1.0.1...v1.0.2) (2022-07-24)
 
 
